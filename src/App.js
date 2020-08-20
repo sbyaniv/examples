@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import { ReactFormValidation } from "./routes/ReactFormValidation";
 import { ReactFormValidation2 } from "./routes/ReactFormValidation2";
+import { ReactFormValidation3 } from "./routes/ReactFormValidation3";
 
 function App() {
   return (
@@ -24,6 +25,12 @@ function App() {
           <Route exact path={`/react_form_validation2`}>
             <div className="Section">
               <ReactFormValidation2 />
+            </div>
+          </Route>
+
+          <Route exact path={`/react_form_validation3`}>
+            <div className="Section">
+              <ReactFormValidation3 />
             </div>
           </Route>
         </Switch>
