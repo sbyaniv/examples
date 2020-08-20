@@ -5,18 +5,22 @@ export const ReactFormValidation = ({}) => {
   const { register, handleSubmit, errors } = useForm();
 
   const onSubmit = (form) => {
-    alert(`Required Input: ${form.requiredInput}`);
+    alert(`Required Input: ${form.required}`);
   };
 
   return (
     <form className="ReactFormValidation" onSubmit={handleSubmit(onSubmit)}>
       <input
-        name="requiredInput"
+        autoComplete="off"
+        name="required"
         type="text"
         ref={register({ required: true })}
+        style={{ fontSize: "2em" }}
       />
-      {errors.requiredInput && (
-        <p>{`Input field "${errors.requiredInput.ref.name}" is required 🐑`}</p>
+      {errors.required && (
+        <p
+          style={{ fontSize: "2em" }}
+        >{`Input field "${errors.required.ref.name}" is required 🐑`}</p>
       )}
     </form>
   );

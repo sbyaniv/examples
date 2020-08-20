@@ -7,7 +7,8 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
-import { ReactFormValidation } from "./ReactFormValidation";
+import { ReactFormValidation } from "./routes/ReactFormValidation";
+import { ReactFormValidation2 } from "./routes/ReactFormValidation2";
 
 function App() {
   return (
@@ -17,6 +18,12 @@ function App() {
           <Route exact path={`/react_form_validation`}>
             <div className="Section">
               <ReactFormValidation />
+            </div>
+          </Route>
+
+          <Route exact path={`/react_form_validation2`}>
+            <div className="Section">
+              <ReactFormValidation2 />
             </div>
           </Route>
         </Switch>
